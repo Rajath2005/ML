@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Find-S hypothesis output">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b2a3b" />
+      <stop offset="100%" stop-color="#102f1d" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)" />
+  <rect x="80" y="90" width="1040" height="520" rx="32" fill="#0f1720" opacity="0.85" stroke="#3ad19c" stroke-width="3" />
+  <text x="120" y="180" fill="#e4fff3" font-family="Space Grotesk, Arial, sans-serif" font-size="36" font-weight="600">
+    FIND-S Learned Hypothesis
+  </text>
+  <text x="120" y="255" fill="#a9f5d4" font-family="Space Grotesk, Arial, sans-serif" font-size="24">
+    &lt;Sky:Sunny, AirTemp:Warm, Humidity:?, Wind:?, Water:Warm, Forecast:Same&gt;
+  </text>
+  <text x="120" y="340" fill="#8bc9ff" font-family="Space Grotesk, Arial, sans-serif" font-size="20">
+    Highlights: single most specific hypothesis covering all positive examples.
+  </text>
+  <text x="120" y="390" fill="#8bc9ff" font-family="Space Grotesk, Arial, sans-serif" font-size="20">
+    Use this as a baseline for version space exploration.
+  </text>
+</svg>

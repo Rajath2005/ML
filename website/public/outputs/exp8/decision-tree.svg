@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Decision tree summary">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2b193f" />
+      <stop offset="100%" stop-color="#0f2348" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)" />
+  <rect x="90" y="90" width="1020" height="520" rx="28" fill="#0b1024" opacity="0.9" stroke="#8f7bff" stroke-width="3" />
+  <text x="130" y="170" fill="#f3e8ff" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="600">
+    Decision Tree Classifier
+  </text>
+  <text x="130" y="240" fill="#d6ccff" font-family="Space Grotesk, Arial, sans-serif" font-size="22">
+    Target: Malignant vs Benign
+  </text>
+  <text x="130" y="300" fill="#b8f2ff" font-family="Space Grotesk, Arial, sans-serif" font-size="20">
+    Rule snippet: mean texture ≤ 19.9 → Benign
+  </text>
+  <text x="130" y="340" fill="#b8f2ff" font-family="Space Grotesk, Arial, sans-serif" font-size="20">
+    Rule snippet: mean radius &gt; 14.2 → Malignant
+  </text>
+  <text x="130" y="420" fill="#ffe6a7" font-family="Space Grotesk, Arial, sans-serif" font-size="20">
+    Exported rules included on the experiment page.
+  </text>
+</svg>

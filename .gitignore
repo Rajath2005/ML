@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / Next.js
+website/node_modules/
+website/.next/
+website/out/
+website/.turbo/
+website/.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
