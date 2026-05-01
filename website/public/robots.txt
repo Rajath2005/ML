@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ml-lab-seven.vercel.app/sitemap.xml
