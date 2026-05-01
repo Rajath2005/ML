@@ -24,7 +24,10 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "ML Lab Experiments | Rajath",
-  description: "A visual portfolio of machine learning lab experiments with code, outputs, and explanations."
+  description: "A visual portfolio of machine learning lab experiments with code, outputs, and explanations.",
+  verification: {
+    google: "eWwpOvW5PQD9Ce9UgELCT6THC3sabhITjJsK21nMbH0"
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
