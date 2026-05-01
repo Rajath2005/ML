@@ -4,10 +4,12 @@ import { experiments } from "@/data/experiments";
 const baseUrl = "https://ml-lab-seven.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date().toISOString().split('T')[0];
+
   // Homepage
   const homepage = {
     url: baseUrl,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: "weekly" as const,
     priority: 1.0,
   };
@@ -15,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Experiments index page
   const experimentsPage = {
     url: `${baseUrl}/experiments`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: "weekly" as const,
     priority: 0.8,
   };
@@ -23,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Individual experiment pages
   const experimentPages = experiments.map((exp) => ({
     url: `${baseUrl}/experiments/${exp.id}`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
