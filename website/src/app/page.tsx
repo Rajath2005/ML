@@ -9,7 +9,7 @@ export default function HomePage() {
 
   return (
     <main>
-      <section className="section">
+      <section className="section animate-fade-in-up">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6">
           <header className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
             <div className="flex flex-col gap-6">
@@ -18,8 +18,8 @@ export default function HomePage() {
                 <Tag label="BCSL606" tone="mint" />
                 <Tag label="VCET" tone="berry" />
               </div>
-              <h1 className="font-display text-4xl leading-tight text-ink-100 sm:text-5xl lg:text-6xl">
-                Master your <span className="gradient-text">BCSL606 ML Lab Programs</span> with code and datasets.
+              <h1 className="font-display text-4xl leading-tight sm:text-5xl lg:text-6xl">
+                <span className="gradient-text">Master your BCSL606 ML Lab Programs</span> with code and datasets.
               </h1>
               <p className="text-lg text-ink-100/80">
                 A comprehensive resource designed for 3rd Year, 6th Semester VTU Computer Science Engineering students. Access Python code, downloadable datasets, and full visual outputs.
@@ -27,7 +27,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/experiments"
-                  className="flex min-h-[44px] items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink-900 shadow-glow transition hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-white"
+                  className="btn-primary flex min-h-[44px] items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all hover:-translate-y-1 active:scale-95 focus-visible:ring-2 focus-visible:ring-white"
                 >
                   View Lab Programs
                 </Link>
@@ -39,7 +39,7 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="hero-card">
+            <div className="hero-card animate-float">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
                 <Image
                   src="/outputs/exp3/figure-1.png"
@@ -187,7 +187,7 @@ export default function HomePage() {
             </div>
               <Link
               href="/experiments"
-              className="flex min-h-[44px] items-center justify-center rounded-full bg-accent-2 px-6 py-3 text-sm font-semibold text-ink-900 transition hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-white"
+              className="btn-primary flex min-h-[44px] items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all hover:-translate-y-1 active:scale-95 focus-visible:ring-2 focus-visible:ring-white"
             >
               Go to programs
             </Link>

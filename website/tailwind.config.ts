@@ -14,9 +14,9 @@ const config: Config = {
         "accent-2": "var(--accent-2)",
         "accent-3": "var(--accent-3)",
         ink: {
-          900: "#0f172a",
-          800: "#1e293b",
-          700: "#334155",
+          900: "#060512",
+          800: "#0b0c16",
+          700: "#151828",
           100: "#f8fafc"
         },
         glow: {
@@ -38,6 +38,20 @@ const config: Config = {
       boxShadow: {
         glow: "0 0 50px rgba(255, 205, 122, 0.25)",
         card: "0 20px 60px rgba(7, 12, 28, 0.45)"
+      },
+      keyframes: {
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" }
+        }
+      },
+      animation: {
+        "fade-in-up": "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "float": "float 6s ease-in-out infinite"
       }
     }
   },
