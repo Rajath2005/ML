@@ -67,3 +67,12 @@ Then open `http://localhost:3000`.
 
 - Outputs and reports are already staged for the website under [website/public](website/public).
 - This repo is designed for easy browsing and showcasing results.
+
+## Other VTU 22 Scheme Lab Resources
+
+Check out my other repositories for VTU 22 scheme lab programs:
+
+- **React Lab (BCSL657B)**: [GitHub Repo](https://github.com/Rajath2005/React-Lab) | [Website](https://reactlabexp.netlify.app/)
+- **Web Technology Lab (BCSL504)**: [GitHub Repo](https://github.com/Rajath2005/web-lab)
+- **Technical Writing using LaTeX (BCSL456D)**: [GitHub Repo](https://github.com/Rajath2005/latex-lab-manuals) | [Website](https://latex-lab-manuals.vercel.app/)
+- **Analysis and Design of Algorithms (ADA) Lab**: [GitHub Repo](https://github.com/Rajath2005/Analysis-and-Design-of-Algorithms)
