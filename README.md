@@ -1,4 +1,8 @@
-# ML Lab Experiments Portfolio
+# ML Lab Experiments Portfolio - BCSL606 (VTU 22 Scheme)
+
+Welcome to the comprehensive **Machine Learning Lab (ML Lab)** repository tailored for **3rd Year, 6th Semester Computer Science Engineering** students. This repository contains complete Python solutions, datasets, visual outputs, and a full portfolio website built with Next.js for the **Machine Learning Laboratory (Subject Code: BCSL 606 / BCSL606)** under the **VTU 22 Scheme** (Visvesvaraya Technological University).
+
+Designed as a helpful reference for all VTU engineering students, especially those at **VCET (Vivekananda College of Engineering and Technology)** and other VTU-affiliated colleges, providing an end-to-end guide to ML experiments.
 
 A curated machine learning lab repository with 10 experiments, datasets, outputs, and a full portfolio website built with Next.js.
 

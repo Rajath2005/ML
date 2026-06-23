@@ -10,11 +10,14 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular"]
       },
       colors: {
+        accent: "var(--accent)",
+        "accent-2": "var(--accent-2)",
+        "accent-3": "var(--accent-3)",
         ink: {
-          900: "#0b0f1a",
-          800: "#11162a",
-          700: "#1a2140",
-          100: "#dfe8ff"
+          900: "#0f172a",
+          800: "#1e293b",
+          700: "#334155",
+          100: "#f8fafc"
         },
         glow: {
           500: "#f5b14c",

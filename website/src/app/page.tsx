@@ -14,26 +14,26 @@ export default function HomePage() {
           <header className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
             <div className="flex flex-col gap-6">
               <div className="flex flex-wrap gap-2">
-                <Tag label="ML Lab Portfolio" tone="glow" />
-                <Tag label="10 Experiments" tone="mint" />
-                <Tag label="Data + Outputs" tone="berry" />
+                <Tag label="VTU 22 Scheme" tone="glow" />
+                <Tag label="BCSL606" tone="mint" />
+                <Tag label="VCET" tone="berry" />
               </div>
               <h1 className="font-display text-4xl leading-tight text-ink-100 sm:text-5xl lg:text-6xl">
-                Build intuition with <span className="gradient-text">hands-on machine learning</span> experiments.
+                Master your <span className="gradient-text">BCSL606 ML Lab Programs</span> with code and datasets.
               </h1>
               <p className="text-lg text-ink-100/80">
-                A curated portfolio of ML lab work with code, visual outputs, and concise algorithm explanations. Explore regression, classification, clustering, and beyond.
+                A comprehensive resource designed for 3rd Year, 6th Semester VTU Computer Science Engineering students. Access Python code, downloadable datasets, and full visual outputs.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/experiments"
-                  className="rounded-full bg-glow-400 px-6 py-3 text-sm font-semibold text-ink-900 shadow-glow transition hover:-translate-y-0.5"
+                  className="flex min-h-[44px] items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink-900 shadow-glow transition hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-white"
                 >
-                  Explore all experiments
+                  View Lab Programs
                 </Link>
                 <Link
                   href="https://github.com/Rajath2005/ML"
-                  className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-ink-100 transition hover:border-white/40"
+                  className="flex min-h-[44px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-ink-100 transition hover:border-white/40 focus-visible:ring-2 focus-visible:ring-white"
                 >
                   View GitHub repo
                 </Link>
@@ -130,11 +130,11 @@ export default function HomePage() {
                 Browse by category, follow the learning path, or dive into code and results.
               </p>
             </div>
-            <Link
+              <Link
               href="/experiments"
-              className="rounded-full bg-mint-400 px-6 py-3 text-sm font-semibold text-ink-900 transition hover:-translate-y-0.5"
+              className="flex min-h-[44px] items-center justify-center rounded-full bg-accent-2 px-6 py-3 text-sm font-semibold text-ink-900 transition hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-white"
             >
-              Go to experiments
+              Go to programs
             </Link>
           </div>
         </div>

@@ -12,7 +12,8 @@ export default function ExperimentCard({ experiment, index }: { experiment: Expe
   return (
     <Link
       href={`/experiments/${experiment.id}`}
-      className="group flex h-full flex-col gap-4 rounded-3xl border border-white/10 bg-ink-800/80 p-6 shadow-card transition duration-300 hover:-translate-y-2 hover:border-white/25"
+      className="group flex h-full flex-col gap-4 rounded-3xl border border-white/10 bg-ink-800/80 p-6 shadow-card transition duration-300 hover:-translate-y-2 hover:border-white/25 focus-visible:ring-2 focus-visible:ring-accent"
+      aria-label={`View details for ${experiment.title}`}
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10">
         <Image
@@ -35,9 +36,11 @@ export default function ExperimentCard({ experiment, index }: { experiment: Expe
           {experiment.summary}
         </p>
       </div>
-      <div className="mt-auto flex items-center justify-between text-sm text-ink-100/70">
-        <span>Dataset: {experiment.dataset}</span>
-        <span className="text-glow-300">View</span>
+      <div className="mt-auto flex items-center justify-between gap-4 text-sm text-ink-100/70">
+        <span className="truncate">Data: {experiment.dataset}</span>
+        <span className="flex min-h-[44px] min-w-[120px] items-center justify-center rounded-lg bg-white/10 px-4 font-medium text-white transition group-hover:bg-accent group-hover:text-ink-900">
+          View Program
+        </span>
       </div>
     </Link>
   );

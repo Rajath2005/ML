@@ -23,8 +23,8 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ML Lab Experiments | Rajath",
-  description: "A visual portfolio of machine learning lab experiments with code, outputs, and explanations.",
+  title: "BCSL606 ML Lab Programs | VTU 22 Scheme | Rajath",
+  description: "A complete resource for 3rd Year, 6th Semester VTU Computer Science Engineering students. Access Python code, datasets, and outputs for the Machine Learning Lab (BCSL606).",
   verification: {
     google: "eWwpOvW5PQD9Ce9UgELCT6THC3sabhITjJsK21nMbH0"
   }
