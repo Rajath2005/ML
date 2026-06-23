@@ -11,6 +11,7 @@ export type Experiment = {
   outputs: Array<{ src: string; alt: string; caption: string }>;
   codeSnippet: string;
   codeUrl: string;
+  localCodePath: string;
   datasetUrl: string;
   reportUrl?: string;
 };
@@ -20,7 +21,7 @@ const repoBase = "https://github.com/Rajath2005/ML";
 export const experiments: Experiment[] = [
   {
     id: "exp1",
-    title: "Data Exploration + Outlier Scan",
+    title: "EXP1: Data Exploration + Outlier Scan",
     summary: "Histograms, box plots, and IQR-based outlier detection for California Housing features.",
     category: "Exploratory Analysis",
     level: "Beginner",
@@ -46,12 +47,13 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "df = pd.read_excel('California.xlsx')\nplot_histogram(df)\nplot_boxplots(df)\nanalyze_outliers(df)",
     codeUrl: `${repoBase}/blob/main/EXP1/Exp1.py`,
+    localCodePath: "EXP1/Exp1.py",
     datasetUrl: "/datasets/California%20Housing.csv",
     reportUrl: "/downloads/exp1-report.pdf"
   },
   {
     id: "exp2",
-    title: "Correlation Mapping",
+    title: "EXP2: Correlation Mapping",
     summary: "Correlation heatmap and pair plot to reveal feature relationships.",
     category: "Exploratory Analysis",
     level: "Beginner",
@@ -77,11 +79,12 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "correlation_matrix = df.corr()\nsns.heatmap(correlation_matrix, annot=True)\nsns.pairplot(df)",
     codeUrl: `${repoBase}/blob/main/EXP2/Exp2.py`,
+    localCodePath: "EXP2/Exp2.py",
     datasetUrl: "/datasets/California%20Housing.csv"
   },
   {
     id: "exp3",
-    title: "PCA Dimensionality Reduction",
+    title: "EXP3: PCA Dimensionality Reduction",
     summary: "Reduce Iris dataset from 4D to 2D and visualize class separation.",
     category: "Dimensionality Reduction",
     level: "Intermediate",
@@ -102,12 +105,13 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "df_scaled = scaler.fit_transform(df[features])\npca = PCA(n_components=2)\nprincipal_components = pca.fit_transform(df_scaled)",
     codeUrl: `${repoBase}/blob/main/EXP3/Exp3.py`,
+    localCodePath: "EXP3/Exp3.py",
     datasetUrl: "/datasets/iris_data.csv",
     reportUrl: "/downloads/exp3-report.pdf"
   },
   {
     id: "exp4",
-    title: "Find-S Concept Learning",
+    title: "EXP4: Find-S Concept Learning",
     summary: "Learns the most specific hypothesis consistent with positive examples.",
     category: "Concept Learning",
     level: "Beginner",
@@ -128,12 +132,13 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "positive_examples = df[df.iloc[:,-1].str.lower()=='yes']\nhypothesis = positive_examples.iloc[0, :-1].copy()\n...",
     codeUrl: `${repoBase}/blob/main/EXP4/Exp4.py`,
+    localCodePath: "EXP4/Exp4.py",
     datasetUrl: "/datasets/tennis.csv",
     reportUrl: "/downloads/exp4-report.pdf"
   },
   {
     id: "exp5",
-    title: "Semi-Supervised KNN Labeling",
+    title: "EXP5: Semi-Supervised KNN Labeling",
     summary: "Labels unlabeled data using KNN and compares accuracy across k values.",
     category: "Semi-Supervised Learning",
     level: "Intermediate",
@@ -154,12 +159,13 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "knn = KNeighborsClassifier(n_neighbors=k)\nknn.fit(X_train, y_train)\naccuracy = accuracy_score(true_labels, predictions)",
     codeUrl: `${repoBase}/blob/main/EXP5/EXP5.py`,
+    localCodePath: "EXP5/EXP5.py",
     datasetUrl: "",
     reportUrl: "/downloads/exp5-report.pdf"
   },
   {
     id: "exp6",
-    title: "Locally Weighted Regression",
+    title: "EXP6: Locally Weighted Regression",
     summary: "Fits non-parametric curves with varying bandwidth values.",
     category: "Regression",
     level: "Intermediate",
@@ -180,11 +186,12 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "weights = np.exp(-np.sum((X_train - x)**2, axis=1) / (2 * tau**2))\nW = np.diag(weights)",
     codeUrl: `${repoBase}/blob/main/EXP6/EXP6.py`,
+    localCodePath: "EXP6/EXP6.py",
     datasetUrl: ""
   },
   {
     id: "exp7",
-    title: "Linear vs Polynomial Regression",
+    title: "EXP7: Linear vs Polynomial Regression",
     summary: "Compares linear and polynomial regression on housing and auto MPG data.",
     category: "Regression",
     level: "Intermediate",
@@ -210,11 +217,12 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "linear_reg.fit(X_train, y_train)\ny_pred = linear_reg.predict(X_test)\nprint(f\"Linear Regression - MSE: {mse}\")",
     codeUrl: `${repoBase}/blob/main/EXP7/EXP7.py`,
+    localCodePath: "EXP7/EXP7.py",
     datasetUrl: "/datasets/BostonHousing.csv"
   },
   {
     id: "exp8",
-    title: "Decision Tree Classification",
+    title: "EXP8: Decision Tree Classification",
     summary: "Builds a decision tree to classify breast cancer samples.",
     category: "Classification",
     level: "Intermediate",
@@ -235,12 +243,13 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "dt_classifier = DecisionTreeClassifier(random_state=42)\ndt_classifier.fit(X_train, y_train)\nprint(export_text(dt_classifier))",
     codeUrl: `${repoBase}/blob/main/EXP-8/Exp8.py`,
+    localCodePath: "EXP-8/Exp8.py",
     datasetUrl: "/datasets/breast_cancer.csv",
     reportUrl: "/downloads/exp8-report.pdf"
   },
   {
     id: "exp9",
-    title: "PCA + Naive Bayes Faces",
+    title: "EXP9: PCA + Naive Bayes Faces",
     summary: "Classifies Olivetti faces using PCA + Gaussian Naive Bayes.",
     category: "Classification",
     level: "Advanced",
@@ -266,11 +275,12 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "pca = PCA(n_components=50)\nX_pca = pca.fit_transform(X)\nnb_classifier.fit(X_train, y_train)",
     codeUrl: `${repoBase}/blob/main/EXP-9/EXP9.py`,
+    localCodePath: "EXP-9/EXP9.py",
     datasetUrl: "/datasets/olivetti_faces.csv"
   },
   {
     id: "exp10",
-    title: "K-means Clustering + PCA",
+    title: "EXP10: K-means Clustering + PCA",
     summary: "Clusters Wisconsin breast cancer data and visualizes in PCA space.",
     category: "Clustering",
     level: "Advanced",
@@ -291,6 +301,7 @@ export const experiments: Experiment[] = [
     ],
     codeSnippet: "kmeans = KMeans(n_clusters=2, random_state=42, n_init=10)\ny_kmeans = kmeans.predict(X_scaled)\nprint(confusion_matrix(y, y_kmeans))",
     codeUrl: `${repoBase}/blob/main/EXP-10/Exp10.py`,
+    localCodePath: "EXP-10/Exp10.py",
     datasetUrl: "/datasets/Wisconsin_Breast_Cancer.csv"
   }
 ];

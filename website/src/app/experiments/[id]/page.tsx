@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -10,6 +12,18 @@ export default function ExperimentDetailPage({ params }: { params: { id: string 
 
   if (!experiment) {
     notFound();
+  }
+
+  let fullCode = experiment.codeSnippet;
+  try {
+    if (experiment.localCodePath) {
+      const filePath = path.join(process.cwd(), "..", experiment.localCodePath);
+      if (fs.existsSync(filePath)) {
+        fullCode = fs.readFileSync(filePath, "utf-8");
+      }
+    }
+  } catch (err) {
+    console.error("Failed to read local python file", err);
   }
 
   return (
@@ -53,10 +67,10 @@ export default function ExperimentDetailPage({ params }: { params: { id: string 
             <p className="mt-3 font-display text-2xl text-ink-100">{experiment.dataset}</p>
             <div className="mt-6 flex flex-col gap-3 text-sm">
               <Link
-                href={experiment.codeUrl}
-                className="rounded-full border border-white/20 px-4 py-2 text-center text-ink-100 transition hover:border-white/40"
+                href="#code-snapshot"
+                className="rounded-full border border-white/20 px-4 py-2 text-center text-ink-100 transition hover:border-white/40 focus-visible:ring-2 focus-visible:ring-accent"
               >
-                View full code
+                ↓ Scroll to Python code
               </Link>
               {experiment.datasetUrl ? (
                 <Link
@@ -98,13 +112,13 @@ export default function ExperimentDetailPage({ params }: { params: { id: string 
           </div>
         </section>
 
-        <section className="mt-12">
-          <h2 className="font-display text-2xl">Code snapshot</h2>
+        <section id="code-snapshot" className="mt-12">
+          <h2 className="font-display text-2xl">Full Python Code</h2>
           <p className="mt-2 text-sm text-ink-100/70">
-            Key lines that anchor the experiment workflow.
+            The complete Python script directly from the repository.
           </p>
           <div className="mt-4">
-            <CodeBlock code={experiment.codeSnippet} />
+            <CodeBlock code={fullCode} />
           </div>
         </section>
 
